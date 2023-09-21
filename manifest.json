@@ -1,0 +1,19 @@
+{
+  "name": "dummy-frame",
+  "description": "A hack to utilize session storage across origins",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["frame.html", "script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
